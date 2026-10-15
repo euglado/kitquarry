@@ -1,0 +1,7 @@
+# Contributing / Katkı
+
+Open an issue with the concrete problem, expected behavior, actual behavior and non-sensitive reproduction steps. Do not include tokens, `.env`, private server details or personal information. Discuss feature changes before large patches. Keep one-server, low-permission defaults and explicit preview/share behavior.
+
+Use Node 24 and a clean checkout without `.env`. Run `npm ci --ignore-scripts`, `npm run check` and `npm audit --audit-level=low`. Format with `npx biome check --write .`. Add meaningful boundary/regression tests for behavior changes. Do not weaken permission, privacy, dependency or secret checks to make CI pass. Keep TR/EN help and privacy disclosures consistent with behavior. CI must pass on all three operating systems. Live Discord validation uses your own private application/server and no credentials in issues or CI. Contributions use the MIT license.
+
+Sorunu, beklenen/gerçek davranışı ve hassas veri içermeyen tekrar adımlarını issue ile açıklayın. Token, `.env`, özel sunucu veya kişisel bilgi eklemeyin. Büyük değişiklikleri önce görüşün; düşük izin, tek sunucu ve açık önizleme/paylaşım davranışını koruyun. Node 24 ve `.env` olmayan temiz checkout kullanın; yukarıdaki kontrolleri çalıştırın, davranış değişikliklerine anlamlı sınır/regresyon testleri ekleyin. Kontrolleri zayıflatmayın. Türkçe/İngilizce yardım ve gizlilik açıklamalarını güncel tutun. Canlı testte kendi özel uygulama/sunucunuzu kullanın; CI veya issue'ya sır eklemeyin. Katkılar MIT lisanslıdır.

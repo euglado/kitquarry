@@ -1,0 +1,32 @@
+{
+  "name": "kitquarry",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Discord workshop kit and whole-pack supply planner",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "build": "tsc -p tsconfig.json",
+    "start": "node --env-file-if-exists=.env dist/src/main.js",
+    "register": "node --env-file-if-exists=.env dist/src/register.js",
+    "lint": "biome check .",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "supply": "node scripts/supply.mjs",
+    "check": "npm run lint && npm test && npm run supply"
+  },
+  "dependencies": {
+    "discord.js": "14.27.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@types/node": "24.19.2",
+    "typescript": "7.0.2"
+  },
+  "overrides": {
+    "@types/node": "24.19.2"
+  }
+}
